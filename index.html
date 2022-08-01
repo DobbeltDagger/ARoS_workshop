@@ -13,18 +13,23 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+
+        <!-- ********************************************************* -->
         <!-- Prerequisites: Intro to html -->
 				<section>
           <section>
             <b>Install code editor</b><br/><br/>
-            Visual Studio Code, Atom, Sublime Text? ...
+            Visual Studio Code,<br/>
+            Atom,<br/>
+            Sublime Text? ...
           </section>
           <section>
-            <b>Setting up server</b><br/><br/>
-            We need to be able to serve images without problems
+            <b>Setting up live server?</b><br/><br/>
+            We need to be able to serve images/files without problems
           </section>
         </section>
 
+        <!-- ********************************************************* -->
         <!-- HTML introduction -->
 				<section>
           <section>
@@ -40,11 +45,11 @@
           </section>
           <section>
             <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body></body>
-</html>
+              <!DOCTYPE html>
+              <html>
+                <head></head>
+                <body></body>
+              </html>
             </script></code></pre>
           </section>
           <!-- Set the title and serve the document -->
@@ -52,72 +57,140 @@
             <b>title</b><br/><br/>
             Set the title and serve the document<br/><br/>
             <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Nineties Website</title>
-  </head>
-  <body></body>
-</html>
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <title>My Nineties Website</title>
+                </head>
+                <body></body>
+              </html>
             </script></code></pre>            
           </section>
-
-
 
           <!-- common elements. https://www.learn-html.org/en/Basic_Elements  -->
           <section>
             <b>More common elements</b><br/><br/>
             Paragraphs, Headers, Images<br/><br/>
             <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Nineties Website</title>
-  </head>
-  <body>
-    <h1>A big header</h1>
-    <p>Here's a paragraph of text,
-      that can span a few lines, if I want</p>
-    <img src="" />    
-  </body>
-</html>
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <title>My Nineties Website</title>
+                </head>
+                <body>
+                  <h1>A big header</h1>
+                  <p>Here's a paragraph of text,
+                    that can span a few lines, if I want</p>
+                  <img src="" />    
+                </body>
+              </html>
             </script></code></pre>
           </section>
+
           <!-- Links -->
           <section>
             <b>Evem more common elements</b><br/><br/>
             Links<br/><br/>
             <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Nineties Website</title>
-  </head>
-  <body>
-    <h1>A big header</h1>
-    <p>Here's a <a href="google.dk">paragraph of text</a>,
-      that can span a few lines, if I want</p>
-    <img src="" />    
-  </body>
-</html>
+            <!DOCTYPE html>
+            <html>
+              <head>
+                <title>My Nineties Website</title>
+              </head>
+              <body>
+                <h1>A big header</h1>
+                <p>Here's a <a href="google.dk">paragraph of text</a>,
+                  that can span a few lines, if I want</p>
+                <img src="" />    
+              </body>
+            </html>
+            </script></code></pre>
+          </section>
+        </section>
+
+
+        <!-- ********************************************************* -->
+        <!-- CSS -->
+        <section>
+
+          <!-- CSS generally -->
+          <section>
+            <b>Cascading Style Sheets</b><br/><br/>
+            HTML structures the code, CSS styles the code<br/>
+            How do you want your elements to look and feel?
+          </section>
+          <!-- Body styles -->
+          <section>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <title>My Nineties Website</title>
+                  <style>
+                    body {
+                      background-color: tomato;
+                      color: white;
+                    }
+                  </style>
+                </head>
+                ...
+              </html>
             </script></code></pre>
           </section>
 
+          <!-- CSS, classes -->
+          <section>
+            <b>CSS classes</b><br/><br/>
+            We can build our own classes.<br/>
+            Let's wrap all our content in a class,<br/>
+            so we can make a text column that is not too wide<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              <div class="mainColumn">
+                <!-- our content here -->
+              </div>
+            </script></code></pre>
+          </section>
+          <section>
+            <b>CSS class for main content</b><br/><br/>
+            Let's define styles for our new class<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              <style>
+                body {
+                  background-color: tomato;
+                  color: white;
+                }
+
+                .mainContent {
+                  max-width: 60ch;
+                  margin: 0px auto;
+                }
+              </style>
+            </script></code></pre>
+          </section>          
+
+        </section>
 
 
-          <!-- CSS -->
-          <!-- INLINE AND BLOCK LEVEL ELEMENTS -->
-
-          <!-- 
-          Tables
-          Forms
-          Semantic HTML
-          -->
-
-          <!-- FONTS, BG, GIFS, MIDI ... -->
 
 
-          <!-- ADDITIONAL RESOURCES -->
+
+        <!-- INLINE AND BLOCK LEVEL ELEMENTS -->
+
+        <!-- 
+        Tables
+        Forms
+        Semantic HTML
+        -->
+
+        <!-- FONTS, BG, GIFS, MIDI ... -->
+
+        <!-- Putting it online -->
+
+        
+        
+        <!-- ********************************************************* -->
+        <!-- ADDITIONAL RESOURCES -->
+        <section>
           <section>
             <b>Additional Resources</b><br/><br/>
             <a href="https://www.learn-html.org/" target="_blank">https://www.learn-html.org/</a><br/>
