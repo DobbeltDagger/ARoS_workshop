@@ -136,6 +136,7 @@ gulp.task('plugins', () => {
                     commonjs(),
                     babel({
                         ...babelConfig,
+                        exclude: [/core-js/],
                         ignore: [/node_modules\/(?!(highlight\.js|marked)\/).*/],
                     }),
                     terser()

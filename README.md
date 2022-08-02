@@ -1,4 +1,4 @@
-## ARoS workshops
-### Build Your Own 90's Websits
+## Build Your Own 90's Website. ARoS + MIXR workshop
 
-With Lee Tusman
+With Lee Tusman, Flux Factory, NY
+
