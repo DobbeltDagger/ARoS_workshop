@@ -100,23 +100,22 @@
 
           <!-- Links, italic and bold -->
           <section>
-            <b>More common elements</b><br/><br/>
-            Images, italic, bold<br/><br/>
+            <b>More Common (inline) Tags</b><br/><br/>
+            Italic, Bold, Underline<br/><br/>
             <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
-            <!DOCTYPE html>
-            <html>
-              <head>
-                <title>My Nineties Website</title>
-              </head>
-              <body>
-                <h1>A big header</h1>
-                <p>Here's a <b>paragraph of text</b>,
-                  that can span a <i>few lines</i>,
-                  and that <a href="https://aros.dk">has a link</a>
-                  I can click</p>
-                <img src="images/rotating.gif" />
-              </body>
-            </html>
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <title>My Nineties Website</title>
+                </head>
+                <body>
+                  <h1>A big header</h1>
+                  <p>Here's a <b>paragraph of text</b>,
+                    that <u>can</u> span a <i>few lines</i>,
+                    and <a href="https://aros.dk">has a link</a>
+                    I can click</p>
+                </body>
+              </html>
             </script></code></pre>
           </section>
 
@@ -124,9 +123,26 @@
           <section>
             ... opening links in a new window<br/><br/>
             <pre><code data-trim data-noescape><script type="text/template">
-            ... <a href="https://aros.dk" target="_blank">has a link</a> ...
+              ... <a href="https://aros.dk" target="_blank">has a link</a> ...
             </script></code></pre>
           </section>
+
+          <!-- images -->
+          <section>
+            <b>Inserting An Image</b><br/><br/>
+            Make a new folder called "images"<br/>
+            and download an image to that folder<br/>
+            Now, reference that image file from your code ... <br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              ...
+                <p>Here's a <b>paragraph of text</b>,
+                  that <u>can</u> span a <i>few lines</i>,
+                  and <a href="https://aros.dk">has a link</a>
+                  I can click</p>
+                <img src="images/rotating.gif" />
+              ...
+            </script></code></pre>
+          </section>          
 
         </section>
 
@@ -167,9 +183,9 @@
             Let's wrap all our content in a class,<br/>
             so we can make a text column that is not too wide<br/><br/>
             <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
-              <div class="mainContent">
+              <main class="mainContent">
                 <!-- our content here -->
-              </div>
+              </main>
             </script></code></pre>
           </section>
           <section>
@@ -223,14 +239,16 @@
           <section>
             <b>Wrapping Content in Article Tag ...</b><br/><br/>
             <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
-              <article>
-                <h1>A big header</h1>
-                <p>Here's a <b>paragraph of text</b>,
-                  that can span a <i>few lines</i>,
-                  and that <a href="https://aros.dk">has a link</a>
-                  I can click</p>
-                <img src="images/rotating.gif" />
-              </article>
+              ...
+                <article>
+                  <h1>A big header</h1>
+                  <p>Here's a <b>paragraph of text</b>,
+                    that can span a <i>few lines</i>,
+                    and that <a href="https://aros.dk">has a link</a>
+                    I can click</p>
+                  <img src="images/rotating.gif" />
+                </article>
+              ...
             </script></code></pre>            
           </section>
           <!-- styling articles -->
@@ -259,7 +277,9 @@
             Make a site about something you're passionate about!<br/><br/>
             If you're out of ideas:<br/>
             Make a site about your first pet?<br/>
-            Your favorite band as a teenager?
+            Your favorite band as a teenager?<br/>
+            A 90's version of a contemporary site?<br/>
+            An ASCII art work?
           </section>
 
         </section>
