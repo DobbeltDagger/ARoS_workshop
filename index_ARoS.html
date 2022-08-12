@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>reveal.js</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/blackNew.css?v=2">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+        <!-- ********************************************************* -->
+        <!-- Prerequisites: Intro to html -->
+				<section>
+          <section>
+            <b>Installing a Code Editor</b><br/><br/>
+            Maybe you have one already?<br/>Visual Studio Code, Atom, Sublime Text? ...<br/><br/>
+            If not, I recommend <em>Visual Studio Code</em><br/>for this workshop
+          </section>
+          <section>
+            <b>Make a Folder on Your Laptop</b><br/><br/>
+            This is where your site lives on your machine<br/>
+            Name the folder <em>"my90sWebsite"</em> maybe?<br/><br/>
+            Open this folder in <em>Visual Studio Code</em>
+          </section>
+          <section>
+            <b>Setting Up the Live Server</b><br/><br/>
+            Press the "Extensions" icon in VS Code<br/>and type "live server" in search field<br/>
+            ... install that plugin ...
+          </section>
+          <section>
+            <b>Making the First Document</b><br/><br/>
+            Press the "new file" button in VS Code,<br/>and name the file <em>index.html</em><br/><br/>
+            Files named index.html are automatically served
+          </section>        
+        </section>
+
+        <!-- ********************************************************* -->
+        <!-- HTML introduction -->
+				<section>
+          <section>
+            <b>Coding HTML</b><br/><br/>
+            <em>Hypertext Markup Language</em><br/>
+            HTML is not a programming language, but a protocol for structuring online content
+          </section>
+          <!-- Head and body -->
+          <section>
+            <b>Html, Head and Body</b><br/><br/>
+            HTML, HEAD and BODY elements define the basic structure of a HTML document<br/>
+            What do these three elements do?<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              <!DOCTYPE html>
+              <html>
+                <head></head>
+                <body></body>
+              </html>
+            </script></code></pre>
+          </section>
+          <!-- Set the title and serve the document -->
+          <section>
+            <b>The Document Title</b><br/><br/>
+            Set the document title,<br/>
+            and let's start the local server<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <title>My Nineties Website</title>
+                </head>
+                <body></body>
+              </html>
+            </script></code></pre>            
+          </section>
+
+          <!-- common elements. https://www.learn-html.org/en/Basic_Elements  -->
+          <section>
+            <b>Some Common HTML Elements</b><br/><br/>
+            Paragraphs, Headers, Links<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <title>My Nineties Website</title>
+                </head>
+                <body>
+                  <h1>A big header</h1>
+                  <p>Here's a paragraph of text,
+                    that can span a few lines,
+                    and <a href="https://aros.dk">has a link</a>
+                    that I can click</p>
+                </body>
+              </html>
+            </script></code></pre>
+          </section>
+
+          <!-- Links, italic and bold -->
+          <section>
+            <b>More Common (inline) Tags</b><br/><br/>
+            Italic, Bold, Underline<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <title>My Nineties Website</title>
+                </head>
+                <body>
+                  <h1>A big header</h1>
+                  <p>Here's a <b>paragraph of text</b>,
+                    that <u>can</u> span a <i>few lines</i>,
+                    and <a href="https://aros.dk">has a link</a>
+                    I can click</p>
+                </body>
+              </html>
+            </script></code></pre>
+          </section>
+
+          <!-- I can open link in a new window -->
+          <section>
+            ... opening links in a new window<br/><br/>
+            <pre><code data-trim data-noescape><script type="text/template">
+              ... <a href="https://aros.dk" target="_blank">has a link</a> ...
+            </script></code></pre>
+          </section>
+
+          <!-- images -->
+          <section>
+            <b>Inserting An Image</b><br/><br/>
+            Make a new folder called "images"<br/>
+            and download an image to that folder<br/>
+            Now, reference that image file from your code ... <br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              ...
+                <p>Here's a <b>paragraph of text</b>,
+                  that <u>can</u> span a <i>few lines</i>,
+                  and <a href="https://aros.dk">has a link</a>
+                  I can click</p>
+                <img src="images/rotating.gif" />
+              ...
+            </script></code></pre>
+          </section>          
+
+        </section>
+
+
+        <!-- ********************************************************* -->
+        <!-- CSS -->
+        <section>
+
+          <!-- CSS generally -->
+          <section>
+            <b>Cascading Style Sheets</b><br/><br/>
+            HTML structures the content, CSS styles it<br/>
+            How do you want your elements to look and feel?
+          </section>
+          <!-- Body styles -->
+          <section>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              <!DOCTYPE html>
+              <html>
+                <head>
+                  <title>My Nineties Website</title>
+                  <style>
+                    body {
+                      background-color: pink;
+                      color: black;
+                    }
+                  </style>
+                </head>
+                ...
+              </html>
+            </script></code></pre>
+          </section>
+
+          <!-- CSS, classes -->
+          <section>
+            <b>CSS classes</b><br/><br/>
+            We can build our own classes.<br/>
+            Let's wrap all our content in a class,<br/>
+            so we can make a text column that is not too wide<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              ...  
+                <body>
+                  <main class="mainContent">
+                    <!-- our content here -->
+                  </main>
+                </body>
+              ...
+            </script></code></pre>
+          </section>
+          <section>
+            <b>CSS class for main content</b><br/><br/>
+            Let's define styles for our new class<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              <style>
+                body {
+                  background-color: pink;
+                  color: white;
+                }
+
+                .mainContent {
+                  max-width: 60ch;
+                  margin: 0px auto;
+                }
+              </style>
+            </script></code></pre>
+          </section>          
+
+        </section>
+
+
+
+        <!-- ********************************************************* -->
+        <!-- DEVELOPER TOOLS -->
+        <section>
+          <section>
+            <b>Developer Tools</b><br/><br/>
+            Tools to help you structure and style your content<br/>
+            Press F12 or go to "More Tools" -> "Developer tools" ...
+          </section>
+          <!-- elements and konsol -->
+          <!--
+          <section>
+            <p>hey</p>
+          </section>
+          -->
+
+        </section>
+
+
+        <!-- ********************************************************* -->
+        <!-- A little more structure -->
+        <section>
+          <section>
+            <b>A Little More Structure ...</b><br/><br/>
+            Let's divide the site's content,<br/>as the size of the site grows
+          </section>
+          <!-- Making divs -->
+          <section>
+            <b>Wrapping Content in Article Tag ...</b><br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              ...
+                <article>
+                  <h1>A big header</h1>
+                  <p>Here's a <b>paragraph of text</b>,
+                    that can span a <i>few lines</i>,
+                    and that <a href="https://aros.dk">has a link</a>
+                    I can click</p>
+                  <img src="images/rotating.gif" />
+                </article>
+              ...
+            </script></code></pre>            
+          </section>
+          <!-- styling articles -->
+          <section>
+            <b>Giving the Article Tag Some Styles</b><br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              ...
+                <head>
+                  <title>My Nineties Website</title>
+                  <style>
+                    ...
+                    article {
+                      border-bottom: 1px solid black;
+                      padding-bottom: 1em;
+                      margin-bottom: 1em;
+                    }
+                  </style>
+                </head>
+              ...
+            </script></code></pre>         
+          </section>
+          <!-- styling articles -->
+          <section>
+            <b>More Articles</b><br/><br/>       
+            Now, build some more article content<br/>
+            Make a site about something you're passionate about!<br/><br/>
+            If you're out of ideas:<br/>
+            <em>Make a site about your pet?<br/>
+            Your favorite band as a teenager?<br/>
+            A 90's version of a contemporary site?<br/>
+            An ASCII art work website?</em>
+          </section>
+
+        </section>
+
+        <!-- INLINE AND BLOCK LEVEL ELEMENTS -->
+
+        <!-- 
+        Tables
+        Forms
+        Semantic HTML
+        -->
+
+        <!-- FONTS, BG image, GIFS, MIDI ... -->
+
+        <!-- Putting it online -->
+
+        
+        
+        <!-- ********************************************************* -->
+        <!-- ADDITIONAL RESOURCES -->
+        <section>
+          <section>
+            <b>Additional Resources</b><br/><br/>
+            <a href="https://www.learn-html.org/" target="_blank">https://www.learn-html.org/</a><br/>
+            <a href="https://www.w3schools.com/TAgs/default.asp" target="_blank">https://www.w3schools.com/tags/default.asp</a><br/>
+            <a href="https://htmlcolorcodes.com/color-names/" target="_blank">https://htmlcolorcodes.com/color-names/</a><br/><br/>
+            <a href="thecode.html" target="_blank">All of our code</a>
+          </section>
+          <!-- contact information -->
+          <section>
+            <b>Communities</b><br/><br/>
+            <a href="https://codeandshare.net/" target="_blank">https://codeandshare.net/</a><br/>
+            <a href="https://www.fluxfactory.org/" target="_blank">https://www.fluxfactory.org/</a><br/>
+          </section>          
+
+        </section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
