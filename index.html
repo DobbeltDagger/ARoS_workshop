@@ -1,157 +1,93 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>reveal.js</title>
-    <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/blackNew.css?v=2">
-    <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css">
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>reveal.js</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/blackNew.css?v=2">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
 
         <!-- ********************************************************* -->
-        <!-- Prerequisites: Intro to html -->
-        <section>
-          <!-- what is Code And Share -->
+        <!-- Prerequisites: Intro to JAVASCRIPT -->
+				<section>
           <section>
-            <b>Presentation:<br/>Code&Share[ ] + FLUX + MIXR</b><br/><br/>
-            What are those?<br/><br/>
-            (Please download and install <em>Visual Studio Code</em><br/>
-            if you haven't already installed it)
+            <b>HTML + CSS + JAVASCRIPT</b><br/><br/>
+            This is an introduction to javascript.<br/>
+            Html, Css and javascript makes up the front end of the internet. But how does javascript differ from the two other code formations?
           </section>
-          <!-- reiteration of last workshop -->
+          <!-- getting people up to speed -->
           <section>
-            <b>Reiteration of the Last Workshop</b><br/><br/>
-            Remembering what we did in ARoS<br/>
-            and getting new participants up to speed
+            <b>Differences:</b><br/><br/>
+            - JS is a programming language<br/>
+            - JS is event driven<br/>
+            - JS is dynamic over time
           </section>
-          <!-- the code -->
+          <!-- prereq -->          
           <section>
-            <b>Code From Last Workshop</b><br/><br/>
-            <a href="https://pad.vvvvvvaria.org/BuildYourOwn" target="_blank">https://pad.vvvvvvaria.org/BuildYourOwn</a><br/><br/>
-            Paste this into a file called <em>index.html</em>,<br/>
-            and save <em>index.html</em> in a folder called "my90sWebsite"
+            <b>Prerequisites:</b><br/><br/>
+            A code editor (Visual Studio Code),<br/>
+            + the <em>"Live Server"</em> plugin for your editor,<br/>
+            + an html page (previous workshop code)<br/><br/>
+            For those without html: <a href="https://pad.vvvvvvaria.org/BuildYourOwn" target="_blank">https://pad.vvvvvvaria.org/BuildYourOwn</a><br/><br/>
           </section>
-          <!-- these HTML elms ... show a code editor with this -->
-          <section>
-            Html, Head and Body + Document title<br/>
-            Paragraphs, Headers and Links<br/>
-            Italic, Bold and Underline<br/>
-            Inserting images + local image folder creation<br/>
-            Semantic html -> Main and Article<br/>
-            Cascading style sheet
-          </section>
-
+ 
         </section>
 
         <!-- ********************************************************* -->
-        <!-- GRID introduction, LEE-->
-
-        <!-- ********************************************************* -->
-        <!-- TRANSFORM introduction -->
-        <section>
-
-          <!-- images -->
+        <!-- Let's start coding -->
+				<section>
+          <!-- where do we put the code -->
           <section>
-            <b>CSS Transform</b><br/><br/>
-            Let's make a rotating sun together<br/>
-            Go to <em>html.energy</em> and download a star ...<br/>
-            Put it in the "images" folder
+            <b>Where do we put the javascript code?</b><br/><br/>
+            Let's make a script-tag before the closing body-tag<br/><br/>
+            We want to make sure the contents of the body elements are rendered before we try to manipulate them ...
           </section>
-          <!--  html + css -->
+          <!-- let's start by writing hello world -->
           <section>
-            <b>Put the IMG on the Page</b><br/><br/>
-            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
-              ...
-                <img src="./images/star.png" class="star"/>
-              ...
-            </script></code></pre>
+            <b>Hello World ...</b><br/><br/>
+            Let's log <em>Hello world</em> to the console ...<br/><br/>
+            <pre><code>console.log("Hello World");</code></pre>
           </section>
-          <!-- pure css -->
-          <section>
-            <b>Make the IMG Spin Infinitely</b><br/><br/>
-            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
-              ...
-                @keyframes rotating {
-                  from {
-                    transform: rotate(0deg);
-                  }
-                  to {
-                    transform: rotate(360deg);
-                  }
-                }
-
-                .star {
-                  animation: rotating 100s linear infinite;
-                }
-              ...
-            </script></code></pre>
-          </section>
-          <!-- resources -->
-          <section>
-            <b>MDN transform + animation pages</b><br/><br/>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/transform</a><br/><br/>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/animation</a>
-          </section>
-          <!-- also position fixed + absolute -->
-          <section>
-            <b>Also: We Can Position Things</b><br/><br/>
-            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">            
-              ...
-                .star {
-                  animation: rotating 100s linear infinite;
-                  position: fixed;
-                  top: 1em;
-                  right: 1em;
-                }
-              ...
-            </script></code></pre>              
-          </section>
+          
 
         </section>
 
+        
         <!-- ********************************************************* -->
         <!-- ADDITIONAL RESOURCES -->
-        <!--
         <section>
           <section>
             <b>Additional Resources</b><br/><br/>
-            <a href="https://www.learn-html.org/" target="_blank">https://www.learn-html.org/</a><br/>
-            <a href="https://www.w3schools.com/TAgs/default.asp" target="_blank">https://www.w3schools.com/tags/default.asp</a><br/>
-            <a href="https://htmlcolorcodes.com/color-names/" target="_blank">https://htmlcolorcodes.com/color-names/</a><br/><br/>
-            <a href="thecode.html" target="_blank">All of our code</a>
-          </section>
-          <section>
-            <b>Communities</b><br/><br/>
-            <a href="https://codeandshare.net/" target="_blank">https://codeandshare.net/</a><br/>
-            <a href="https://www.fluxfactory.org/" target="_blank">https://www.fluxfactory.org/</a><br/>
-          </section>
-          -->
-
+            <a href="https://www.learn-js.org/" target="_blank">https://www.learn-js.org/</a><br/>
+            <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/" target="_blank">https://www.freecodecamp.org -> basic-javascript</a><br/>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">https://developer.mozilla.org -> JavaScript/Guide</a>
+          </section> 
         </section>
 
-      </div>
-    </div>
+			</div>
+		</div>
 
-    <script src="dist/reveal.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
-    <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
-      Reveal.initialize({
-        hash: true,
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
 
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-      });
-    </script>
-  </body>
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
 </html>
