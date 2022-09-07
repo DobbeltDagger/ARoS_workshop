@@ -27,7 +27,7 @@
             <b>Differences:</b><br/><br/>
             - JS is a programming language<br/>
             - JS is event driven<br/>
-            - JS is dynamic over time
+            - JS is dynamic (not static) over time
           </section>
           <!-- prereq -->          
           <section>
@@ -39,6 +39,35 @@
           </section>
  
         </section>
+
+
+        <!-- ********************************************************* -->
+        <!-- BACK IN TIME! ... FROM THIS vid: https://www.youtube.com/watch?v=4MsfBokJiSs -->
+				<section>
+          <section>
+            <b>Brief history of Javascript ...</b><br/><br/>
+            Ecmascript ...
+            Netscape Navigator ... '93 ... Approching Sun Microsystems -> Can we use Java on the net? Applets? Brendan Eich made the first solution! (The Scheme Programming Language). The name of this language is Mocha! - Changed to Livescript when launched ...
+            Then later named javascript (because java was famous)
+            Netscape wanted to have this awesome lang in their browser, so that it could still compete with IE, that was a free browser. Netscape Navigator was a paid browser ...
+            In 1995 javascript was launched in Netscape Navigator 2!
+            Microsoft then reverse engineered javscript, and named it Jscript!
+            Netscape goes to ECMA (who are responsible for standards ...) -> a new language standard called Ecmascript is presented to the World
+            Ecmascript 1 was launched in 1997
+            1999 Netscape was sold to AOL ... Netscape Navigator was made open source ... which in turn became Firefox!!
+            2000 dot.com bubble burst!!
+            Macromedia Actionscript was actually inspired by Ecmascript 4 (which had so many new features that browsers couldn't implement them)
+            2005 AJAX (Asynchronous Javascript and HTML). Now we can inject data into the page without page reload. Jquery is big here!
+            2008 Google invents chrome. V8 engine compiles code, so that it is both compiled and interpeted. The jit compiler! (Just in time compiler). This is much faster than just a interpreted language. The compiler makes an.exe file on you machine, and can run the code faster!
+            Node.js is a version of chrome's V8 engine...
+            Now JS is backend also - FULLSTACK!
+            2009 Ecmascript 5
+            2015 Ecmascript 6
+            2016 ES7 .. and from now on it's yearly versions!!! ...
+          </section>
+        </section>
+
+
 
         <!-- ********************************************************* -->
         <!-- Let's start coding -->
@@ -55,9 +84,92 @@
             Let's log <em>Hello world</em> to the console ...<br/><br/>
             <pre><code>console.log("Hello World");</code></pre>
           </section>
-          
+          <!-- Variables -->
+          <section>
+            <b>Let's make a variable</b><br/><br/>
+            Variables can contain values.<br/>
+            Think about moving: You put your plates, glasses and cutlery in a cardboard box, and write "kitchenware" on the side of it. That's how variables work ...<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              const kitchenWare = "All my plates and cutlery";
+              console.log(kitchenWare);
+            </script></code></pre>
+          </section>
+          <!-- Variables -->
+          <section>
+            <b>Let's use let ...</b><br/><br/>
+            const is constant. Let's use let ...<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              let kitchenWare = "All my plates and cutlery";
+              console.log(kitchenWare);
+
+              kitchenWare = kitchenWare + ", oh and all my glasses too!";
+              console.log(kitchenWare);
+            </script></code></pre>
+          </section>
+          <!-- Variables -->
+          <section>
+            <b>Also, numbers ...</b><br/><br/>
+            We can off course also use integers and floats ...<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              let myVariable = 1;
+              let anotherVariable = 2;
+              console.log(myVariable + anotherVariable);
+              
+              // using assignment operator to change the value of our variable
+              myVariable = anotherVariable * 2;
+              console.log(myVariable);
+            </script></code></pre>
+          </section>
+
+          <!-- CONNECTING to the DOM -->
+          <section>
+            <b>Document Object Model</b><br/><br/>
+            We can look at the page content with javascript<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              console.log(document);
+            </script></code></pre>
+          </section> 
+
+          <section>
+            <b>Binding functions to Document Object Model</b><br/><br/>
+            We can bind functionality to the DOM by traversing the it for specific elements, classses or IDs<br/><br/>
+            <pre><code data-line-numbers data-trim data-noescape><script type="text/template">
+              const pElements = document.querySelectorAll('p');
+              console.log(pElements);
+            </script></code></pre>
+          </section> 
+
 
         </section>
+
+
+        <!-- ********************************************************* -->
+        <!-- MArgrete's code! -->
+				<section>
+          <!-- where do we put the code -->
+          <section>
+            <b>Intregrating p5.js ...</b><br/><br/>
+            Let's look at the code from artistsandhackers.org<br/>
+            Let's import a few scripts at the bottom of the page...<br/>
+            <pre><code data-line-numbers data-trim data-noescape>
+              ...
+                &lt;script src="./assets/js/p5.min.js"&gt;&lt;/script&gt;
+                &lt;script src="./assets/js/parallax.js"&gt;&lt;/script&gt;
+                &lt;script src="./assets/js/hand.js"&gt;&lt;/script&gt;
+                &lt;script src="./assets/js/tagColor.js"&gt;&lt;/script&gt;
+                &lt;script src="./assets/js/submit.js"&gt;&lt;/script&gt;
+              &lt;/body&gt;
+            </script></code></pre>
+          </section>
+          <!-- Let's look at what hand.js does -->
+          <section>
+            <b>hand.js</b><br/><br/>
+            This is classical p5 code:<br/>
+            preload, setup and draw functions ...<br/><br/>
+            This code makes a transparent &nbsp;&nbsp;<span style="font-family: monospace">&lt;canvas&gt;</span>&nbsp;&nbsp; element on top of the page, draws a bezier curve "arm" from title to cursor -and makes an image follow the cursor
+          </section>
+        </section>
+
 
         
         <!-- ********************************************************* -->

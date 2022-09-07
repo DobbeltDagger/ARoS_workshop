@@ -4,7 +4,7 @@
     <title>My 90s website</title>
     <style>
       body {
-        background-color: pink;
+        background-color: whitesmoke;
         color: black;
       }
 
@@ -48,6 +48,19 @@
 
 
     <script>
+
+      // what is the document?
+      console.log("Document:", document);
+
+
+      const pElements = document.querySelectorAll('p');
+      console.log(pElements);
+
+      for (let i = 0; i < pElements.length; i++) {
+        console.log("elm.", pElements[i]);
+        pElements[i].innerHTML = pElements[i].innerHTML + " <b><i>HELLO!!</i></b>";
+      }
+
     </script>
   </body>
 </html>
